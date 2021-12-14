@@ -16,7 +16,7 @@ const App = () => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)]
     setComputerChoice(randomChoice)
   }
-  
+
 useEffect(()=> {
   switch (userChoice + computerChoice) {
     case 'scissorspaper':
@@ -40,7 +40,7 @@ useEffect(()=> {
   return (
     <div className="App">
       <h1>user choice is: {userChoice}</h1>
-      <h1>user choice is: {computerChoice}</h1>
+      <h1>computer choice is: {computerChoice}</h1>
       {choices.map((choice, index) =>
         <button key={index} onClick={() => handleClick(choice)}>{choice}</button>
       )}
